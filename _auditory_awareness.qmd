@@ -1,18 +1,18 @@
 ---
-title: "Does The Physical Distance Between Couples Increase Trust and Overall Satisfaction? A Comparative Study Between Long-Distance Romantic Relationships and Geographically Close Relationships"
-shorttitle: "Trust and Relationship Satisfaction between LDR vs. GCR couples"
+title: "Effects of Afferent Cardiac Signals on Neural Response in the Auditory Cortex During Bistable Auditory Perception"
+shorttitle: "Interoceptive Signals and Bistable Auditory Perception"
 author:
   - name: Aditi Joshi
     corresponding: true
     orcid: 0000-0000-0000-6756
     email: aditij@uchicago.edu
     affiliations:
-      - name: University of Delhi
+      - name: University of Chicago
         department: Department of Psychology
-        address: South Campus, University of Delhi
-        city: Delhi
-        country: INDIA
-        postal-code: 210301
+        address: 5801 S Ellis Ave
+        city: Chicago, IL
+        country: United States of America
+        postal-code: 60637
 author-note:
   status-changes: 
     affiliation-change: ~
@@ -23,10 +23,10 @@ author-note:
     related-report: ~
     conflict-of-interest: No conflicts of interest. 
     financial-support: ~
-    gratitude: "I would like to thank my supervisors, Ms. Nikita Srivastava and Ms. Manjari Sarathe for their unwavering support, patience, encouragement, passion, and immense knowledge. Their expertise was paramount in generating a structure for the paper as well as identifying the key research techniques undertaken in the paper. Without their help, the final product would have been extremely lacking. Aside from my supervisors, I'd like to thank everyone who took part in the study and contributed to making the research process run smoothly."
+    gratitude: ~
     authorship-agreements: ~
-abstract: "Long-distance romantic relationships (LDRRs) have existed for centuries, and while technological advancements have made them more manageable, they still differ significantly from geographically close relationships (GCRs), particularly in terms of in-person interactions. Interpersonal trust, the willingness to be vulnerable and rely on one’s partner, may be influenced by the physical distance in LDRRs. Similarly, relationship satisfaction reflects overall contentment in a relationship and may be shaped by different relational dynamics in LDRRs and GCRs. This study examined trust and relationship satisfaction in 50 LDRR couples and 50 GCR couples using standardized measures. Findings revealed that trust levels were significantly higher in LDRRs, suggesting that physical distance may foster greater reliance on partners. While relationship satisfaction did not differ significantly, it was slightly higher in LDRRs. These results highlight the unique psychological dynamics of LDRRs and emphasize the need for further research into the factors influencing trust and satisfaction across different relationship types."
-keywords: [long distance relationships, geographically close relationships, trust, relationship satisfaction]
+abstract: ""
+keywords: [cardiac signals, systole, diastole, bistable auditory perception, interoceptive signals]
 floatsintext: true
 # Numbered lines (.pdf and .docx only)
 numbered-lines: false
@@ -51,8 +51,9 @@ format:
     latex_engine: xelatex
     mainfont: "Times New Roman"
     number_sections: true
+    fig-pos: "H"
     geometry:
-      - margin=1in  # Adjust this value
+      - margin=1in 
     fig_caption: true
     include-in-header: 
       text: |
@@ -95,8 +96,6 @@ A within-subject experimental design was used where each participant was exposed
 
 A total of 100 trials were presented where after every 10-second tone sequence, participants indicated whether they heard the tones as one stream (ABA-ABA) or two streams (A-A-A-A and -B—-B-) with a button press (Higgins et. al., 2014). Each participant chose the tone they heard in each cardiac phase and cardiac activity was measured through ECG (Electrocardiogram) using  an actiCHamp amplifier (Brain Products, Germany) with one electrode placed under the right clavicle (collarbone), one at the bottom of the left ribcage, and under the left clavicle for effective cardiac measurement (Veillette, Gao & Nusbaum, 2024). 
 
-\space{-2em}
-
 ### Measurement of Neural Responses
 
 Neural responses were evaluated using EEG (Electroencephalogram) to analyze amplitudes from the auditory cortex, specifically the inferior colliculus in the midbrain which is responsible for auditory processing (Krizman & Kraus, 2019). Frequency-following response—a measure of the neural ability of the brain to effectively encode auditory      stimuli (Coffey et. al., 2019) was measured which has the same frequency as the tone used to produce it. FFR was recorded from a single channel (Cz), referenced to linked mastoids, with a ground electrode on the forehead, sampled at 20,000 Hz (Coffey et. al., 2019). Using electrodes placed along the vertex of the scalp, activity in the midbrain was measured. The use of ECG & EEG to measure the cardiac phases and amplitudes of the auditory cortex were effective in the current study due to accuracy of the tools in measuring heart rate and neural responses, respectively. However, one potential limitation of this method is the possibility for signal noise or interference among EEG and ECG data, which could be alleviated through attentive preprocessing and signal separation techniques.
@@ -115,80 +114,104 @@ library(knitr)
 library(readxl)
 library(dplyr)
 library(boot)
+library(knitr)
+library(stringr)
+library(forcats)
+library(conflicted)  # Resolves function conflicts
+library(flextable)   # Create and format tables
+library(ftExtra)     # Additional features for flextable
+library(readr)       # Reading/writing data files
+library(ggplot2)     # Data visualization
+library(gridExtra)   # Arranging multiple plots
+library(kableExtra)  # Styling tables
+library(car)         # Regression diagnostics
+
 
 ```
 
-```{r}
-#| label: descriptive stats
+```{r setup}
+#| label: descriptive-numeric_stats
 #| include: false
-#| echo: false
 
 # Read the data from the Excel file
-file_path1 = "finaldata1.xlsx"
-frame = read_excel(file_path1)
+file_path1 <- "finaldata1.xlsx"
+frame <- read_excel(file_path1)
 
 # Check the column names to ensure you're using the correct ones
 colnames(frame)
 
 ## -------DESCRIPTIVE STATISTICS--------
 
-# Create a single summary table with clearer column names
-library(dplyr)
-library(readr)
-
-# Function to compute and save summary statistics
-save_summary_table <- function(data, filename = "summary_statistics.csv") {
-  summary_table <- data %>%
+# Define function to compute summary statistics and save as CSV
+save_summary_stats <- function(data, filename = "summary_statistics.csv") {
+  summary_stats <- data %>%
     summarise(
-      `Mean Systole (dB)` = mean(systole, na.rm = TRUE),
-      `SD Systole (dB)` = sd(systole, na.rm = TRUE),
-      `Mean Diastole (dB)` = mean(diastole, na.rm = TRUE),
-      `SD Diastole (dB)` = sd(diastole, na.rm = TRUE),
-      `Mean n Systole` = mean(n_systole, na.rm = TRUE),
-      `SD n Systole` = sd(n_systole, na.rm = TRUE),
-      `Mean n Diastole` = mean(n_diastole, na.rm = TRUE),
-      `SD n Diastole` = sd(n_diastole, na.rm = TRUE)
+      mean_systole = mean(systole, na.rm = TRUE),
+      sd_systole = sd(systole, na.rm = TRUE),
+      mean_diastole = mean(diastole, na.rm = TRUE),
+      sd_diastole = sd(diastole, na.rm = TRUE),
+      mean_n_systole = mean(n_systole, na.rm = TRUE),
+      sd_n_systole = sd(n_systole, na.rm = TRUE),
+      mean_n_diastole = mean(n_diastole, na.rm = TRUE),
+      sd_n_diastole = sd(n_diastole, na.rm = TRUE)
     )
   
-  # Save the table as a CSV file
-  write_csv(summary_table, filename)
+  # Save as CSV
+  write_csv(summary_stats, filename)
   
-  return(summary_table)
+  return(summary_stats)
 }
 
-# Call the function on your dataset
-summary_result <- save_summary_table(frame, "summary_statistics.csv")
+# Run the function on your dataset
+summary_table <- save_summary_stats(frame, "summary_statistics.csv")
+
+# Store values for inline use (this is crucial!)
+mean_systole <- summary_table$mean_systole
+sd_systole <- summary_table$sd_systole
+mean_diastole <- summary_table$mean_diastole
+sd_diastole <- summary_table$sd_diastole
+mean_n_systole <- summary_table$mean_n_systole
+sd_n_systole <- summary_table$sd_n_systole
+mean_n_diastole <- summary_table$mean_n_diastole
+sd_n_diastole <- summary_table$sd_n_diastole
 
 ```
 
+```{r}
+#| label: descriptive-non-numeric_stats
+#| include: false
+#| warning: false
+#| echo: false
+
+## NOTE: This section did not make sense for my analysis so I just did it for meeting my obejctive but I did not plot it. However, I have plotted the numeric descriptives
+
+# Calculate frequencies for the non-numeric variable (subject)
+subject_freq <- frame %>%
+  group_by(subject) %>%
+  summarise(frequency = n())
+print(subject_freq)
+
+```
+
+Descriptive statistics were computed for both the systole and diastole conditions, including the mean and standard deviations of FFR amplitudes for each. Additionally, the frequencies corresponding to the systole and diastole conditions were also calculated. These statistics provide an overview of the central tendency and variability of the FFR amplitudes and frequencies within each condition. 
 ```{r}
 #| label: tbl-stats-kable
-#| tbl-cap: Mean, SD for Systole and Diastole
-# Load knitr for table formatting
-library(knitr)
+#| tbl-cap: Mean, SD for Systole and Diastole FFR Amplitudes and Frequencies
+#| warning: false
 
-# Display the combined summary table
-kable(summary_table, caption = "Descriptive Statistics for Systole and Diastole")
+# Read the summary statistics CSV
+summary_table <- read_csv("summary_statistics.csv")
 
+# Rename columns for APA formatting
+colnames(summary_table) <- c("Mean Systole (dB)", "SD Systole (dB)", 
+                             "Mean Diastole (dB)", "SD Diastole (dB)", 
+                             "Mean Frequency Systole", "SD Frequency Systole", 
+                             "Mean Frequency Diastole", "SD Frequency Diastole")
+
+kable(summary_table)
 
 ```
-
-
-```{r}
-#| label: histogram
-#| include: false
-#| echo: false
-# Histograms of numeric variables
-ggplot(frame, aes(x = systole)) + 
-  geom_histogram(binwidth = 1, fill = "blue", alpha = 0.5) +
-  ggtitle("Distribution of Systole Amplitudes") +
-  xlab("Amplitude (dB)") + ylab("Count")
-
-ggplot(frame, aes(x = diastole)) + 
-  geom_histogram(binwidth = 1, fill = "red", alpha = 0.5) +
-  ggtitle("Distribution of Diastole Amplitudes") +
-  xlab("Amplitude (dB)") + ylab("Count")
-```
+@tbl-stats-kable shows the mean systolic FFR amplitude was `r round(mean_systole, 2)` dB (SD = `r round(sd_systole, 2)`). The mean diastolic FFR amplitude was `r round(mean_diastole, 2)` dB (SD = `r round(sd_diastole, 2)`). For occurences, the mean systolic frequency was `r round(mean_n_systole, 2)` (SD = `r round(sd_n_systole, 2)`) and the mean diastolic frequency was `r round(mean_n_diastole, 2)` (SD = `r round(sd_n_diastole, 2)`).
 
 
 ```{r}
@@ -223,9 +246,203 @@ t_test_table <- tibble(
 )
 
 # Print the table using kable
-knitr::kable(t_test_table, caption = "Paired t-test Results for Systole vs. Diastole for FFR amplitude")
+knitr::kable(t_test_table)
 
 ```
+```{r}
+#| label: data-transformation-for-ggplot
+#| include: false
+#| echo: false
+#| 
+# Reshape data for ggplot (long format)
+frame_long <- frame %>%
+  pivot_longer(cols = c(systole, diastole),
+               names_to = "Condition",
+               values_to = "FFR_Amplitude") %>%
+  
+  # *** Use stringr to modify Condition labels ***
+  mutate(Condition = str_replace(Condition, "systole", "Systolic Phase"),
+         Condition = str_replace(Condition, "diastole", "Diastolic Phase"),
+         Condition = str_to_title(Condition)) # Capitalize
+
+```
+
+
+```{r}
+#| label: fig-t-test
+#| include: true
+#| warning: false
+#| message: false
+#| echo: false
+#| fig.cap: "Boxplot Comparison Between Low, Medium, & High conditions between Systole & Diastole "
+#| fig.height: 3
+#| fig.width: 5
+#| fig-pos: "H"
+#| 
+ggplot(frame_long, aes(x = Condition, y = FFR_Amplitude, fill = Condition)) +
+  geom_violin(trim = FALSE, scale = "width", draw_quantiles = c(0.25, 0.5, 0.75)) +
+  geom_boxplot(width = 0.1, fill = "white", outlier.shape = NA) +
+  labs(
+    x = "Condition", # Simpler x-axis label
+    y = "FFR Amplitude (dB)",
+    fill = "Condition"
+  ) +
+  theme_bw() +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    axis.title.x = element_text(size = 10, face = "bold"),
+    axis.title.y = element_text(size = 10, face = "bold"),
+    axis.text.x = element_text(size = 10),
+    axis.text.y = element_text(size = 10),
+    legend.position = "top",
+    legend.title = element_text(size=12, face = "bold"),
+    legend.text = element_text(size = 10)
+  ) +
+  scale_fill_manual(values = c("Systolic Phase" = "#666666", "Diastolic Phase" = "#111111"))
+```
+
+
+\vspace{-2em}
+The mean amplitude during systole (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`) was compared to the mean amplitude during diastole (M = `r round(mean(frame$diastole, na.rm = TRUE), 3)`) using a one-sample t-test in @tbl-ttest-kable. The results indicated that the difference between systolic and diastolic amplitudes was not marginally significant, *t*(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 3)`, *p* = `r format.pval(t_test_result$p.value, digits = 3, eps = .05)`. Although the p-value is slightly above the conventional threshold of 0.05, it suggests a trend toward significance.
+```{r}
+
+```
+
+
+```{r}
+#| label: categorization for ANOVA
+#| include: false
+#| echo: false
+# Load necessary library
+
+## uses forcats
+
+# Calculate percentiles
+systole_low <- quantile(frame$systole, 0.33, na.rm = TRUE)
+systole_high <- quantile(frame$systole, 0.67, na.rm = TRUE)
+
+diastole_low <- quantile(frame$diastole, 0.33, na.rm = TRUE)
+diastole_high <- quantile(frame$diastole, 0.67, na.rm = TRUE)
+
+# Categorize systole and diastole based on percentiles and use forcats to handle factor levels
+percentile_frame <- frame %>%
+  mutate(
+    systole_category = case_when(
+      systole <= systole_low ~ "Low",
+      systole > systole_low & systole <= systole_high ~ "Medium",
+      systole > systole_high ~ "High"
+    ),
+    diastole_category = case_when(
+      diastole <= diastole_low ~ "Low",
+      diastole > diastole_low & diastole <= diastole_high ~ "Medium",
+      diastole > diastole_high ~ "High"
+    )
+  ) %>%
+  mutate(
+    systole_category = fct_relevel(systole_category, "Low", "Medium", "High"),  # Relevel systole categories
+    diastole_category = fct_relevel(diastole_category, "Low", "Medium", "High")  # Relevel diastole categories
+  )
+
+```
+
+
+```{r}
+#| label: anova
+#| include: false
+#| echo: false
+# Perform ANOVA for systole categories
+anova_systole <- aov(systole ~ systole_category, data = percentile_frame)
+
+# Perform ANOVA for diastole categories
+anova_diastole <- aov(diastole ~ diastole_category, data = percentile_frame)
+```
+
+```{r}
+#| label: fig-anova-systole
+#| include: true
+#| warning: false
+#| message: false
+#| echo: false
+#| fig.cap: "Boxplot Comparison Between Low, Medium, & High conditions between Systole & Diastole "
+#| fig.height: 3
+#| fig.width: 5
+#| fig-pos: "H"
+
+source("Plotting_Function.R")
+
+# Create boxplot for systole categories
+systole_plot <- CustomPlot(data = percentile_frame, x_var = "systole_category", y_var = "systole", 
+           group_var = NULL, error_type = "SE", plot_type = "boxplot", 
+           bar_width = 0.8, error_bar_width = 0.2, x_label = "Systole", 
+           y_label = "FFR Amplitudes", dodge_position = 0.9, point_size = 3, 
+           facet_var = NULL, font_size = 12, theme_choice = "bw", 
+           add_regression_line = FALSE)
+
+diastole_plot <- CustomPlot(data = percentile_frame, x_var = "diastole_category", y_var = "diastole", 
+           group_var = NULL, error_type = "SE", plot_type = "boxplot", 
+           bar_width = 0.8, error_bar_width = 0.2, x_label = "Diastole", 
+           y_label = "FFR Amplitudes", dodge_position = 0.9, point_size = 3, 
+           facet_var = NULL, font_size = 12, theme_choice = "bw", 
+           add_regression_line = FALSE)
+
+grid.arrange(systole_plot, diastole_plot, ncol = 2)  # Arrange the two plots in one row with two columns
+
+```
+
+```{r}
+#| label: fig-category
+#| include: true
+#| warning: false
+#| message: false
+#| echo: false
+#| fig.cap: "Barplot Comparison Between Low, Medium, & High conditions between Systole & Diastole "
+#| fig.height: 4
+#| fig.width: 6
+#| fig-pos: "H"
+
+# --- Reshape Data for Plotting (Long Format) ---
+percentile_frame_long <- percentile_frame %>%
+  pivot_longer(
+    cols = c(systole_category, diastole_category),
+    names_to = "condition_type",
+    values_to = "category"
+  ) %>%
+  mutate(
+    condition = ifelse(grepl("systole", condition_type), "Systole", "Diastole"),
+    ffr_amplitude = ifelse(condition == "systole", systole, diastole)  # Correctly assign FFR amplitude
+  )
+
+ggplot(percentile_frame_long, aes(x = condition, y = ffr_amplitude, fill = condition)) +  # x = condition
+  geom_bar(stat = "summary", fun = "mean", position = position_dodge(width = 0.8), width = 0.7, color = "black") +
+  facet_wrap(~category, scales = "free_y") +  # Facet by category
+  labs(
+    x = "Condition (Systole vs. Diastole)",  # Keep overall x-axis title
+    y = "FFR Amplitude (dB)",
+    fill = "Condition"
+  ) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_blank(),        # Remove x-axis text WITHIN facets
+    axis.ticks.x = element_blank(),       # Remove x-axis ticks WITHIN facets
+    axis.title.x = element_text(size = 10, face = "bold"), # Keep overall x-axis title
+    axis.text.y = element_text(size = 12),
+    axis.title.y = element_text(size = 10, face = "bold"),
+    legend.position = "top",
+    legend.title = element_text(size = 10, face = "bold"),
+    legend.text = element_text(size = 10),
+    strip.text = element_text(size = 12, face = "bold"),  # Style facet labels
+    panel.spacing = unit(1, "lines")
+  ) +
+  scale_fill_manual(values = c("Systole" = "#666666", "Diastole" = "#111111")) # Remove breaks
+```
+
+
+
+
+
+
+
+
 
 # Discussion
 
