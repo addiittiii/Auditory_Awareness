@@ -1,19 +1,18 @@
 ---
-title: "My Title"
-shorttitle: "Short Title in Running Header"
+title: "Does The Physical Distance Between Couples Increase Trust and Overall Satisfaction? A Comparative Study Between Long-Distance Romantic Relationships and Geographically Close Relationships"
+shorttitle: "Trust and Relationship Satisfaction between LDR vs. GCR couples"
 author:
-  - name: Jane Doe
+  - name: Aditi Joshi
     corresponding: true
-    orcid: 0000-0000-0000-0001
-    email: janedoe@generic.edu
+    orcid: 0000-0000-0000-6756
+    email: aditij@uchicago.edu
     affiliations:
-      - name: Generic University
-        department: Department of Scholarly Studies
-        address: 1234 Capital St.
-        city: New York
-        region: NY
-        country: USA
-        postal-code: 12084-1234
+      - name: University of Delhi
+        department: Department of Psychology
+        address: South Campus, University of Delhi
+        city: Delhi
+        country: INDIA
+        postal-code: 210301
 author-note:
   status-changes: 
     affiliation-change: ~
@@ -22,29 +21,211 @@ author-note:
     study-registration: ~
     data-sharing: ~
     related-report: ~
-    conflict-of-interest: ~
+    conflict-of-interest: No conflicts of interest. 
     financial-support: ~
-    gratitude: ~
+    gratitude: "I would like to thank my supervisors, Ms. Nikita Srivastava and Ms. Manjari Sarathe for their unwavering support, patience, encouragement, passion, and immense knowledge. Their expertise was paramount in generating a structure for the paper as well as identifying the key research techniques undertaken in the paper. Without their help, the final product would have been extremely lacking. Aside from my supervisors, I'd like to thank everyone who took part in the study and contributed to making the research process run smoothly."
     authorship-agreements: ~
-abstract: "This document is a template."
-keywords: [keyword1, keyword2, keyword3]
+abstract: "Long-distance romantic relationships (LDRRs) have existed for centuries, and while technological advancements have made them more manageable, they still differ significantly from geographically close relationships (GCRs), particularly in terms of in-person interactions. Interpersonal trust, the willingness to be vulnerable and rely on one’s partner, may be influenced by the physical distance in LDRRs. Similarly, relationship satisfaction reflects overall contentment in a relationship and may be shaped by different relational dynamics in LDRRs and GCRs. This study examined trust and relationship satisfaction in 50 LDRR couples and 50 GCR couples using standardized measures. Findings revealed that trust levels were significantly higher in LDRRs, suggesting that physical distance may foster greater reliance on partners. While relationship satisfaction did not differ significantly, it was slightly higher in LDRRs. These results highlight the unique psychological dynamics of LDRRs and emphasize the need for further research into the factors influencing trust and satisfaction across different relationship types."
+keywords: [long distance relationships, geographically close relationships, trust, relationship satisfaction]
+floatsintext: true
+# Numbered lines (.pdf and .docx only)
+numbered-lines: false
+# Suppress title page
+suppress-title-page: false
+# Link citations to references
+link-citations: true
 bibliography: bibliography.bib
 format:
   apaquarto-docx: default
   apaquarto-html: default
+  apaquarto-typst: 
+    keep-typ: true
+    list-of-figures: true
+    list-of-tables: true
+    toc: true
   apaquarto-pdf:
+    # Can be jou (journal), man (manuscript), stu (student), or doc (document)
     documentmode: man
+    keep-tex: true
+    output: true
+    latex_engine: xelatex
+    mainfont: "Times New Roman"
+    number_sections: true
+    geometry:
+      - margin=1in  # Adjust this value
+    fig_caption: true
+    include-in-header: 
+      text: |
+        \usepackage{float}
+        \floatplacement{table}{H}
 ---
+Interoceptive signals, which are the sensations from the interior of the body, i.e, the visceral organs like the heart and lungs play a critical role in shaping our perception of the world (Critchley & Harrison, 2013). This interplay is particularly evident in the dynamic relationship of cardiac activity and exteroceptive signals (external sensory inputs like vision or smell). For instance, during states of threat or anticipation, the heart’s rhythmic activity adjusts, often decelerating, which has been argued to minimize interoceptive interference and enhance exteroceptive focus (Skora et al., 2022). Moreover, it has been argued that interoceptive signals produce subjective experiences of self through creating an ‘internal map’ explaining the ‘first-person’ experience of the world (Park & Tallon-Baudry, 2014; Seth & Tsakiris, 2018). This suggests that interoceptive signals do not operate in parallel alongside exteroceptive input, but rather compete for resources, modulating sensory processing, which in turn affects bodily self-consciousness (Higgins et. al., 2020), making it a crucial field of study.
+
+*Bistable Auditory Perception & The Research Gap*
+
+A central challenge in cognitive neuroscience has been understanding this complex relationship of cardiac signals and external sensory input in the brain to construct coherent perceptual experiences. Understanding this integration of internal and external signals is critical especially in the auditory domain where sounds are often overlapped and require the brain to segregate them into different perceptual streams (Bregman, 2000). 
+Bistable auditory perception, a phenomena where one stimulus can be perceived as two different sounds, provides a strong model to explore this integration because it naturally induces two different perceptions of the same sounds that switch back and forth despite an unchanging physical stimulus (Higgins, et. al., 2020). This provides a solid methodological foundation for the current study concerning the exploration of the neural correlates pertinent to the impact of cardiac signals on auditory perception which is currently lacking in the field. 
+Research specifically on bistable auditory perception has revealed distinct neural correlates associated with different perceptual interpretations, with activity patterns varying depending on whether the stimulus is perceived as one or two sound streams (Curtu et. al., 2019; Higgins et. al., 2020) However, the influence of cardiac signals on these neural processes in bistable auditory perception is still poorly understood. This study directly addresses these gaps by (1) exploring the impact of cardiac signals in bistable auditory perception and (2) understanding of the neural underpinnings of the said phenomena. 
+
+*Cardiac Influence on Sensory Perception: Two Clashing Perspectives*
+
+Previous work pertinent to cardiac signals and sensory perception has generated the Baroreceptor hypothesis (Lacey & Lacey, 1978), stating that baroreceptors—the sensors located on the arterial walls—respond to an increased blood pressure by signaling the brain to broadly suppress sensorimotor activity in the Central Nervous System (CNS), following the heart’s contraction (systole). It proposes that the effect of this interoceptive baroreceptor input is to inhibit exteroceptive (i.e. not from the body, such as visual or auditory) perception. There has been recent evidence in support of this hypothesis in auditory perception where recent research on cardio-auditory integration shows reduced auditory N1 components for heartbeat-related sounds compared to external sounds (Elk et. al., 2014). That is, the amplitude of a neural signal was shown to be suppressed when the stimulus is presented during cardiac systole. This suppression persisted after controlling for cardiac artifacts and mirrored suppression seen in volitionally self-generated sounds, suggesting a parallel function – namely,   suppressing predictable sensory input in the auditory cortex. Therefore, the baroreceptor hypothesis continues to drive much work in the study of interoceptive-exteroceptive integration (Park & Tallon-Baudry, 2014) elaborating on the concept of global suppression of sensory processing triggered by cardiac signals.
+
+In contrast to this ‘global suppression’ claim, however, more recent studies have indicated that baroreceptor activity may actually facilitate visual and auditory perception. For vision, baroreceptors have shown to possess the ability to suppress irrelevant stimuli from the main stimuli during systolic activity improving visual selection efficiency (Pramme et. al., 2016). Similarly, synchronization to stimuli to systole has been found to increase the duration of visual dominance in a binocular rivalry task (in which two incongruent images are shown to each eye), suggesting that systolic activity does not suppress visual processing globally but may enhance specific aspects of sensory discrimination (Veillette et. al., 2024). 
+
+These two clashing views regarding the baroreceptor hypothesis may be taken to suggest that cardiac influence on sensory perception is far more nuanced than initially thought, with the effects likely dependent on several other factors. These findings are crucial because they challenge the view of global suppression of sensory stimuli stated by the baroreceptor hypothesis. Moreover, exploring the neural correlates of this phenomena may allow us to uncover the precise mechanisms by which cardiac signals modulate sensory perception. Extending these investigations to the auditory domain is critical for a comprehensive understanding of sensory perception, which this study seeks to achieve.
+
+*Cardiac Signals & Bistable Auditory Stimulus (BAS): Bridging the Gap*
+
+To answer the question of whether cardiac signals modulate the neural response in bistable auditory perception, we utilize the auditory stream segregation paradigm. Auditory Stream Segregation (Snyder & Alain, 2007) explains the ability of humans to segregate two separate sounds (A & B) when they differ in at least one acoustic feature (eg. pitch, frequency). When two acoustically different tones are presented in the A-B-A format repeatedly, these triplets can be perceived as either a single “galloping” auditory stream, or two separate "metronome" streams. B tones are likely to be suppressed given the frequency separation (Snyder & Alain, 2007) between them, potentially making B more vulnerable to suppression during systole. This can be further explained by a theory exploring the brain's ability to influence attention in response to interoceptive signals during systole (Snyder & Alain, 2006).
+Hence, this study aims to understand the neural responses associated with a possible suppression of perception of bistable auditory stimulus–sounds coming from two sources (here, tones labeled A & B), when tested in sync with cardiac systole as compared to cardiac diastole. By synchronizing the presentation of BAS with different phases of the cardiac cycle, we aim to determine the specific influence of cardiac timing on auditory stream segregation and the neural mechanisms underlying the distinct perceptual interpretations of bistable auditory stimuli. This contributes to a more nuanced understanding of the role of interoceptive and exteroceptive processing in the auditory domain, refining current theories regarding the influence of cardiac signals on perception.
+
 
 # Method
 
-## Participants
+## Participants and Ethical Approval
+The study recruited 20 participants (n males, n females, M= , x SD), above the age of 18 years with self-reported normal hearing from the University of Chicago’s subject pool system called ‘Research Participant System’ mainly consisting of undergraduate students, with the only exclusion criteria being previous hearing loss. The number of participants were determined by a power analysis to assess whether this convenience sample was sufficiently large to detect a typical neural-auditory effect, as found in simulations of the auditory cortex performed in our lab (Veillette, unpublished communication). Participants were offered course credit for their participation in the study. Study protocols were approved by the Social and Behavioral Sciences Institutional Review Board (IRB—-) at the University of Chicago.
 
 ## Measures
 
 ## Procedure
+A within-subject experimental design was used where each participant was exposed to an bistable auditory stimulus containing 2 separate tones (i.e A tone and B tone) which was presented in sync with their cardiac phases (i.e systole and diastole). Their neural responses were recorded during the Cardiac Bistable Auditory Task to measure amplitudes in the auditory cortex. 
+
+### Cardiac Bistable Auditory Task
+
+A total of 100 trials were presented where after every 10-second tone sequence, participants indicated whether they heard the tones as one stream (ABA-ABA) or two streams (A-A-A-A and -B—-B-) with a button press (Higgins et. al., 2014). Each participant chose the tone they heard in each cardiac phase and cardiac activity was measured through ECG (Electrocardiogram) using  an actiCHamp amplifier (Brain Products, Germany) with one electrode placed under the right clavicle (collarbone), one at the bottom of the left ribcage, and under the left clavicle for effective cardiac measurement (Veillette, Gao & Nusbaum, 2024). 
+
+\space{-2em}
+
+### Measurement of Neural Responses
+
+Neural responses were evaluated using EEG (Electroencephalogram) to analyze amplitudes from the auditory cortex, specifically the inferior colliculus in the midbrain which is responsible for auditory processing (Krizman & Kraus, 2019). Frequency-following response—a measure of the neural ability of the brain to effectively encode auditory      stimuli (Coffey et. al., 2019) was measured which has the same frequency as the tone used to produce it. FFR was recorded from a single channel (Cz), referenced to linked mastoids, with a ground electrode on the forehead, sampled at 20,000 Hz (Coffey et. al., 2019). Using electrodes placed along the vertex of the scalp, activity in the midbrain was measured. The use of ECG & EEG to measure the cardiac phases and amplitudes of the auditory cortex were effective in the current study due to accuracy of the tools in measuring heart rate and neural responses, respectively. However, one potential limitation of this method is the possibility for signal noise or interference among EEG and ECG data, which could be alleviated through attentive preprocessing and signal separation techniques.
+
 
 # Results
+```{r}
+#| label: loading libraries
+#| include: false
+# Install and load required libraries
+
+library(tidyverse)
+library(readxl)
+library(tibble)
+library(knitr)
+library(readxl)
+library(dplyr)
+library(boot)
+
+```
+
+```{r}
+#| label: descriptive stats
+#| include: false
+#| echo: false
+
+# Read the data from the Excel file
+file_path1 = "finaldata1.xlsx"
+frame = read_excel(file_path1)
+
+# Check the column names to ensure you're using the correct ones
+colnames(frame)
+
+## -------DESCRIPTIVE STATISTICS--------
+
+# Create a single summary table with clearer column names
+library(dplyr)
+library(readr)
+
+# Function to compute and save summary statistics
+save_summary_table <- function(data, filename = "summary_statistics.csv") {
+  summary_table <- data %>%
+    summarise(
+      `Mean Systole (dB)` = mean(systole, na.rm = TRUE),
+      `SD Systole (dB)` = sd(systole, na.rm = TRUE),
+      `Mean Diastole (dB)` = mean(diastole, na.rm = TRUE),
+      `SD Diastole (dB)` = sd(diastole, na.rm = TRUE),
+      `Mean n Systole` = mean(n_systole, na.rm = TRUE),
+      `SD n Systole` = sd(n_systole, na.rm = TRUE),
+      `Mean n Diastole` = mean(n_diastole, na.rm = TRUE),
+      `SD n Diastole` = sd(n_diastole, na.rm = TRUE)
+    )
+  
+  # Save the table as a CSV file
+  write_csv(summary_table, filename)
+  
+  return(summary_table)
+}
+
+# Call the function on your dataset
+summary_result <- save_summary_table(frame, "summary_statistics.csv")
+
+```
+
+```{r}
+#| label: tbl-stats-kable
+#| tbl-cap: Mean, SD for Systole and Diastole
+# Load knitr for table formatting
+library(knitr)
+
+# Display the combined summary table
+kable(summary_table, caption = "Descriptive Statistics for Systole and Diastole")
+
+
+```
+
+
+```{r}
+#| label: histogram
+#| include: false
+#| echo: false
+# Histograms of numeric variables
+ggplot(frame, aes(x = systole)) + 
+  geom_histogram(binwidth = 1, fill = "blue", alpha = 0.5) +
+  ggtitle("Distribution of Systole Amplitudes") +
+  xlab("Amplitude (dB)") + ylab("Count")
+
+ggplot(frame, aes(x = diastole)) + 
+  geom_histogram(binwidth = 1, fill = "red", alpha = 0.5) +
+  ggtitle("Distribution of Diastole Amplitudes") +
+  xlab("Amplitude (dB)") + ylab("Count")
+```
+
+
+```{r}
+#| label: t-test calculation
+#| include: false
+#| echo: false
+
+# Perform a one-sample t-test on the difference between systole and diastole
+t_test_result <- t.test(frame$systole - frame$diastole, mu = 0, alternative = "less")
+print(t_test_result)
+
+
+# Calculate the mean difference (in dB)
+mean_diff <- mean(frame$systole - frame$diastole)
+
+
+wilcoxon_test <- wilcox.test(frame$systole, frame$diastole, alternative = "less", paired = TRUE)
+```
+
+```{r}
+#| label: tbl-ttest-kable
+#| tbl-cap: t-test Results
+
+# Create a tibble for the results
+t_test_table <- tibble(
+  Statistic = c("Mean (Systole)", "Mean (Diastole)", "t-value", "Degrees of Freedom", "p-value"),
+  Value = round(c(mean(frame$systole, na.rm = TRUE), 
+                  mean(frame$diastole, na.rm = TRUE), 
+                  t_test_result$statistic, 
+                  t_test_result$parameter, 
+                  t_test_result$p.value), 3)
+)
+
+# Print the table using kable
+knitr::kable(t_test_table, caption = "Paired t-test Results for Systole vs. Diastole for FFR amplitude")
+
+```
 
 # Discussion
 
