@@ -60,50 +60,47 @@ format:
         \usepackage{float}
         \floatplacement{table}{H}
 ---
-Interoceptive signals, which are the sensations from the interior of the body, i.e, the visceral organs like the heart and lungs play a critical role in shaping our perception of the world (Critchley & Harrison, 2013). This interplay is particularly evident in the dynamic relationship of cardiac activity and exteroceptive signals (external sensory inputs like vision or smell). For instance, during states of threat or anticipation, the heart’s rhythmic activity adjusts, often decelerating, which has been argued to minimize interoceptive interference and enhance exteroceptive focus (Skora et al., 2022). Moreover, it has been argued that interoceptive signals produce subjective experiences of self through creating an ‘internal map’ explaining the ‘first-person’ experience of the world (Park & Tallon-Baudry, 2014; Seth & Tsakiris, 2018). This suggests that interoceptive signals do not operate in parallel alongside exteroceptive input, but rather compete for resources, modulating sensory processing, which in turn affects bodily self-consciousness (Higgins et. al., 2020), making it a crucial field of study.
+Interoceptive signals, which are the sensations from the interior of the body, i.e., the visceral organs like the heart and lungs, play a critical role in shaping our perception of the world [@Critchley2013]. This interplay is particularly evident in the dynamic relationship of cardiac activity and exteroceptive signals (external sensory inputs like vision or smell). For instance, during states of threat or anticipation, the heart's rhythmic activity adjusts, often decelerating, which has been argued to minimize interoceptive interference and enhance exteroceptive focus [@Skora2022]. Moreover, it has been argued that interoceptive signals produce subjective experiences of self through creating an 'internal map' explaining the 'first-person' experience of the world [@Park2014; @Seth2018]. This suggests that interoceptive signals do not operate in parallel alongside exteroceptive input, but rather compete for resources, modulating sensory processing, which in turn affects bodily self-consciousness [@Marshall2022], making it a crucial field of study.
 
 *Bistable Auditory Perception & The Research Gap*
 
-A central challenge in cognitive neuroscience has been understanding this complex relationship of cardiac signals and external sensory input in the brain to construct coherent perceptual experiences. Understanding this integration of internal and external signals is critical especially in the auditory domain where sounds are often overlapped and require the brain to segregate them into different perceptual streams (Bregman, 2000). 
-Bistable auditory perception, a phenomena where one stimulus can be perceived as two different sounds, provides a strong model to explore this integration because it naturally induces two different perceptions of the same sounds that switch back and forth despite an unchanging physical stimulus (Higgins, et. al., 2020). This provides a solid methodological foundation for the current study concerning the exploration of the neural correlates pertinent to the impact of cardiac signals on auditory perception which is currently lacking in the field. 
-Research specifically on bistable auditory perception has revealed distinct neural correlates associated with different perceptual interpretations, with activity patterns varying depending on whether the stimulus is perceived as one or two sound streams (Curtu et. al., 2019; Higgins et. al., 2020) However, the influence of cardiac signals on these neural processes in bistable auditory perception is still poorly understood. This study directly addresses these gaps by (1) exploring the impact of cardiac signals in bistable auditory perception and (2) understanding of the neural underpinnings of the said phenomena. 
+A central challenge in cognitive neuroscience has been understanding this complex relationship of cardiac signals and external sensory input in the brain to construct coherent perceptual experiences. Understanding this integration of internal and external signals is critical, especially in the auditory domain where sounds are often overlapped and require the brain to segregate them into different perceptual streams [@Bregman1990]. Bistable auditory perception, a phenomenon where one stimulus can be perceived as two different sounds, provides a strong model to explore this integration because it naturally induces two different perceptions of the same sounds that switch back and forth despite an unchanging physical stimulus [@Higgins2020]. This provides a solid methodological foundation for the current study concerning the exploration of the neural correlates pertinent to the impact of cardiac signals on auditory perception, which is currently lacking in the field. Research specifically on bistable auditory perception has revealed distinct neural correlates associated with different perceptual interpretations, with activity patterns varying depending on whether the stimulus is perceived as one or two sound streams [@Billig2018; @Higgins2020]. However, the influence of cardiac signals on these neural processes in bistable auditory perception is still poorly understood. This study directly addresses these gaps by (1) exploring the impact of cardiac signals in bistable auditory perception and (2) understanding the neural underpinnings of the said phenomena.
 
 *Cardiac Influence on Sensory Perception: Two Clashing Perspectives*
 
-Previous work pertinent to cardiac signals and sensory perception has generated the Baroreceptor hypothesis (Lacey & Lacey, 1978), stating that baroreceptors—the sensors located on the arterial walls—respond to an increased blood pressure by signaling the brain to broadly suppress sensorimotor activity in the Central Nervous System (CNS), following the heart’s contraction (systole). It proposes that the effect of this interoceptive baroreceptor input is to inhibit exteroceptive (i.e. not from the body, such as visual or auditory) perception. There has been recent evidence in support of this hypothesis in auditory perception where recent research on cardio-auditory integration shows reduced auditory N1 components for heartbeat-related sounds compared to external sounds (Elk et. al., 2014). That is, the amplitude of a neural signal was shown to be suppressed when the stimulus is presented during cardiac systole. This suppression persisted after controlling for cardiac artifacts and mirrored suppression seen in volitionally self-generated sounds, suggesting a parallel function – namely,   suppressing predictable sensory input in the auditory cortex. Therefore, the baroreceptor hypothesis continues to drive much work in the study of interoceptive-exteroceptive integration (Park & Tallon-Baudry, 2014) elaborating on the concept of global suppression of sensory processing triggered by cardiac signals.
+Previous work pertinent to cardiac signals and sensory perception has generated the Baroreceptor hypothesis by @Lacey1978, stating that baroreceptors—the sensors located on the arterial walls—respond to an increased blood pressure by signaling the brain to broadly suppress sensorimotor activity in the Central Nervous System (CNS) following the heart's contraction (systole). It proposes that the effect of this interoceptive baroreceptor input is to inhibit exteroceptive (i.e., not from the body, such as visual or auditory) perception. There has been recent evidence in support of this hypothesis in auditory perception, where recent research on cardio-auditory integration shows reduced auditory N1 components for heartbeat-related sounds compared to external sounds [@VanElk2014]. That is, the amplitude of a neural signal was shown to be suppressed when the stimulus is presented during cardiac systole. This suppression persisted after controlling for cardiac artifacts and mirrored suppression seen in volitionally self-generated sounds, suggesting a parallel function – namely, suppressing predictable sensory input in the auditory cortex. Therefore, the baroreceptor hypothesis continues to drive much work in the study of interoceptive-exteroceptive integration [@Park2014], elaborating on the concept of global suppression of sensory processing triggered by cardiac signals.
 
-In contrast to this ‘global suppression’ claim, however, more recent studies have indicated that baroreceptor activity may actually facilitate visual and auditory perception. For vision, baroreceptors have shown to possess the ability to suppress irrelevant stimuli from the main stimuli during systolic activity improving visual selection efficiency (Pramme et. al., 2016). Similarly, synchronization to stimuli to systole has been found to increase the duration of visual dominance in a binocular rivalry task (in which two incongruent images are shown to each eye), suggesting that systolic activity does not suppress visual processing globally but may enhance specific aspects of sensory discrimination (Veillette et. al., 2024). 
+In contrast to this 'global suppression' claim, however, more recent studies have indicated that baroreceptor activity may actually facilitate visual and auditory perception. For vision, baroreceptors have shown to possess the ability to suppress irrelevant stimuli from the main stimuli during systolic activity, improving visual selection efficiency [@Pramme2016]. Similarly, synchronization of stimuli to systole has been found to increase the duration of visual dominance in a binocular rivalry task (in which two incongruent images are shown to each eye), suggesting that systolic activity does not suppress visual processing globally but may enhance specific aspects of sensory discrimination [@Veillette2024].
 
-These two clashing views regarding the baroreceptor hypothesis may be taken to suggest that cardiac influence on sensory perception is far more nuanced than initially thought, with the effects likely dependent on several other factors. These findings are crucial because they challenge the view of global suppression of sensory stimuli stated by the baroreceptor hypothesis. Moreover, exploring the neural correlates of this phenomena may allow us to uncover the precise mechanisms by which cardiac signals modulate sensory perception. Extending these investigations to the auditory domain is critical for a comprehensive understanding of sensory perception, which this study seeks to achieve.
+These two clashing views regarding the baroreceptor hypothesis may be taken to suggest that cardiac influence on sensory perception is far more nuanced than initially thought, with the effects likely dependent on several other factors. These findings are crucial because they challenge the view of global suppression of sensory stimuli stated by the baroreceptor hypothesis. Moreover, exploring the neural correlates of this phenomenon may allow us to uncover the precise mechanisms by which cardiac signals modulate sensory perception. Extending these investigations to the auditory domain is critical for a comprehensive understanding of sensory perception, which this study seeks to achieve.
 
 *Cardiac Signals & Bistable Auditory Stimulus (BAS): Bridging the Gap*
 
-To answer the question of whether cardiac signals modulate the neural response in bistable auditory perception, we utilize the auditory stream segregation paradigm. Auditory Stream Segregation (Snyder & Alain, 2007) explains the ability of humans to segregate two separate sounds (A & B) when they differ in at least one acoustic feature (eg. pitch, frequency). When two acoustically different tones are presented in the A-B-A format repeatedly, these triplets can be perceived as either a single “galloping” auditory stream, or two separate "metronome" streams. B tones are likely to be suppressed given the frequency separation (Snyder & Alain, 2007) between them, potentially making B more vulnerable to suppression during systole. This can be further explained by a theory exploring the brain's ability to influence attention in response to interoceptive signals during systole (Snyder & Alain, 2006).
-Hence, this study aims to understand the neural responses associated with a possible suppression of perception of bistable auditory stimulus–sounds coming from two sources (here, tones labeled A & B), when tested in sync with cardiac systole as compared to cardiac diastole. By synchronizing the presentation of BAS with different phases of the cardiac cycle, we aim to determine the specific influence of cardiac timing on auditory stream segregation and the neural mechanisms underlying the distinct perceptual interpretations of bistable auditory stimuli. This contributes to a more nuanced understanding of the role of interoceptive and exteroceptive processing in the auditory domain, refining current theories regarding the influence of cardiac signals on perception.
-
+To answer the question of whether cardiac signals modulate the neural response in bistable auditory perception, we utilize the auditory stream segregation paradigm. Auditory Stream Segregation as explained by @Snyder2007 explains the ability of humans to segregate two separate sounds (A & B) when they differ in at least one acoustic feature (e.g., pitch, frequency). When two acoustically different tones are presented in the A-B-A format repeatedly, these triplets can be perceived as either a single "galloping" auditory stream, or two separate "metronome" streams. B tones are likely to be suppressed given the frequency separation [@Snyder2007] between them, potentially making B more vulnerable to suppression during systole. This can be further explained by a theory exploring the brain's ability to influence attention in response to interoceptive signals during systole [@Snyder2006]. Hence, this study aims to understand the neural responses associated with a possible suppression of perception of bistable auditory stimulus–sounds coming from two sources (here, tones labeled A & B), when tested in sync with cardiac systole as compared to cardiac diastole. By synchronizing the presentation of BAS with different phases of the cardiac cycle, we aim to determine the specific influence of cardiac timing on auditory stream segregation and the neural mechanisms underlying the distinct perceptual interpretations of bistable auditory stimuli. This contributes to a more nuanced understanding of the role of interoceptive and exteroceptive processing in the auditory domain, refining current theories regarding the influence of cardiac signals on perception.
 
 # Method
 
 ## Participants and Ethical Approval
-The study recruited 20 participants (n males, n females, M= , x SD), above the age of 18 years with self-reported normal hearing from the University of Chicago’s subject pool system called ‘Research Participant System’ mainly consisting of undergraduate students, with the only exclusion criteria being previous hearing loss. The number of participants were determined by a power analysis to assess whether this convenience sample was sufficiently large to detect a typical neural-auditory effect, as found in simulations of the auditory cortex performed in our lab (Veillette, unpublished communication). Participants were offered course credit for their participation in the study. Study protocols were approved by the Social and Behavioral Sciences Institutional Review Board (IRB—-) at the University of Chicago.
+
+The study recruited 20 participants (n males, n females, M= , x SD), above the age of 18 years with self-reported normal hearing from the University of Chicago's subject pool system called 'Research Participant System' mainly consisting of undergraduate students, with the only exclusion criteria being previous hearing loss. The number of participants were determined by a power analysis to assess whether this convenience sample was sufficiently large to detect a typical neural-auditory effect, as found in simulations of the auditory cortex performed in our lab [@Veillette2024]. Participants were offered course credit for their participation in the study. Study protocols were approved by the Social and Behavioral Sciences Institutional Review Board (IRB—-) at the University of Chicago.
 
 ## Measures
 
 ## Procedure
-A within-subject experimental design was used where each participant was exposed to an bistable auditory stimulus containing 2 separate tones (i.e A tone and B tone) which was presented in sync with their cardiac phases (i.e systole and diastole). Their neural responses were recorded during the Cardiac Bistable Auditory Task to measure amplitudes in the auditory cortex. 
+
+A within-subject experimental design was used where each participant was exposed to an bistable auditory stimulus containing 2 separate tones (i.e A tone and B tone) which was presented in sync with their cardiac phases (i.e systole and diastole). Their neural responses were recorded during the Cardiac Bistable Auditory Task to measure amplitudes in the auditory cortex.
 
 ### Cardiac Bistable Auditory Task
 
-A total of 100 trials were presented where after every 10-second tone sequence, participants indicated whether they heard the tones as one stream (ABA-ABA) or two streams (A-A-A-A and -B—-B-) with a button press (Higgins et. al., 2014). Each participant chose the tone they heard in each cardiac phase and cardiac activity was measured through ECG (Electrocardiogram) using  an actiCHamp amplifier (Brain Products, Germany) with one electrode placed under the right clavicle (collarbone), one at the bottom of the left ribcage, and under the left clavicle for effective cardiac measurement (Veillette, Gao & Nusbaum, 2024). 
+A total of 100 trials were presented where after every 10-second tone sequence, participants indicated whether they heard the tones as one stream (ABA-ABA) or two streams (A-A-A-A and -B—-B-) with a button press [@Higgins2020]. Each participant chose the tone they heard in each cardiac phase and cardiac activity was measured through ECG (Electrocardiogram) using an actiCHamp amplifier (Brain Products, Germany) with one electrode placed under the right clavicle (collarbone), one at the bottom of the left ribcage, and under the left clavicle for effective cardiac measurement [@Veillette2024].
 
 ### Measurement of Neural Responses
 
-Neural responses were evaluated using EEG (Electroencephalogram) to analyze amplitudes from the auditory cortex, specifically the inferior colliculus in the midbrain which is responsible for auditory processing (Krizman & Kraus, 2019). Frequency-following response—a measure of the neural ability of the brain to effectively encode auditory      stimuli (Coffey et. al., 2019) was measured which has the same frequency as the tone used to produce it. FFR was recorded from a single channel (Cz), referenced to linked mastoids, with a ground electrode on the forehead, sampled at 20,000 Hz (Coffey et. al., 2019). Using electrodes placed along the vertex of the scalp, activity in the midbrain was measured. The use of ECG & EEG to measure the cardiac phases and amplitudes of the auditory cortex were effective in the current study due to accuracy of the tools in measuring heart rate and neural responses, respectively. However, one potential limitation of this method is the possibility for signal noise or interference among EEG and ECG data, which could be alleviated through attentive preprocessing and signal separation techniques.
-
+Neural responses were evaluated using EEG (Electroencephalogram) to analyze amplitudes from the auditory cortex, specifically the inferior colliculus in the midbrain which is responsible for auditory processing [@Krizman2019]. Frequency-following response—a measure of the neural ability of the brain to effectively encode auditory stimuli [@Coffey2019] was measured which has the same frequency as the tone used to produce it. FFR was recorded from a single channel (Cz), referenced to linked mastoids, with a ground electrode on the forehead, sampled at 20,000 Hz [@Coffey2019]. Using electrodes placed along the vertex of the scalp, activity in the midbrain was measured. The use of ECG & EEG to measure the cardiac phases and amplitudes of the auditory cortex were effective in the current study due to accuracy of the tools in measuring heart rate and neural responses, respectively.
 
 # Results
 ```{r}
-#| label: loading libraries
+#| label: setup/loading libraries
 #| include: false
 # Install and load required libraries
 
@@ -114,36 +111,43 @@ library(knitr)
 library(readxl)
 library(dplyr)
 library(boot)
+library(broom)
 library(knitr)
 library(stringr)
 library(forcats)
-library(conflicted)  # Resolves function conflicts
-library(flextable)   # Create and format tables
-library(ftExtra)     # Additional features for flextable
-library(readr)       # Reading/writing data files
-library(ggplot2)     # Data visualization
-library(gridExtra)   # Arranging multiple plots
-library(kableExtra)  # Styling tables
-library(car)         # Regression diagnostics
+library(conflicted)  
+library(flextable)   
+library(ftExtra)  
+library(readr)       
+library(ggplot2)     
+library(gridExtra)   
+library(kableExtra)  
 conflicts_prefer(dplyr::filter, .quiet = TRUE)  # Resolve conflicts with filter function
 conflicts_prefer(flextable::separate_header, .quiet = TRUE)  # Resolve conflicts with separate_header function
 ```
 
-```{r setup}
-#| label: descriptive-numeric_stats
+```{r}
+#| label: loading data
 #| include: false
-
+#| 
 # Read the data from the Excel file
 file_path1 <- "finaldata1.xlsx"
 frame <- read_excel(file_path1)
+```
 
-# Check the column names to ensure you're using the correct ones
-colnames(frame)
+```{r setup}
+#| label: function-for-descriptive-stats
+#| include: false
 
-## -------DESCRIPTIVE STATISTICS--------
+## DESCRIPTIVE STATISTICS
 
-# Define function to compute summary statistics and save as CSV
+#' Calculate summary statistics (mean and SD) for specified columns.
+# data: A data frame with 'systole', 'diastole', 'n_systole', and 'n_diastole' columns.
+# filename: File name to save as CSV (optional).  If NULL, no file is saved.
+#' @return A tibble with the means and standard deviations.
 save_summary_stats <- function(data, filename = "summary_statistics.csv") {
+
+  # Calculate means and SDs, handling missing values.
   summary_stats <- data %>%
     summarise(
       mean_systole = mean(systole, na.rm = TRUE),
@@ -155,17 +159,24 @@ save_summary_stats <- function(data, filename = "summary_statistics.csv") {
       mean_n_diastole = mean(n_diastole, na.rm = TRUE),
       sd_n_diastole = sd(n_diastole, na.rm = TRUE)
     )
-  
-  # Save as CSV
-  write_csv(summary_stats, filename)
-  
+
+  # Optionally save to CSV.
+  if (!is.null(filename)) {
+    write_csv(summary_stats, filename)
+  }
+
   return(summary_stats)
 }
+```
+
+```{r}
+#| label: descriptive-stats
+#| include: false
 
 # Run the function on your dataset
 summary_table <- save_summary_stats(frame, "summary_statistics.csv")
 
-# Store values for inline use (this is crucial!)
+# Store values for inline use
 mean_systole <- summary_table$mean_systole
 sd_systole <- summary_table$sd_systole
 mean_diastole <- summary_table$mean_diastole
@@ -189,15 +200,15 @@ sd_n_diastole <- summary_table$sd_n_diastole
 subject_freq <- frame %>%
   group_by(subject) %>%
   summarise(frequency = n())
-print(subject_freq)
 
 ```
 
-Descriptive statistics were computed for both the systole and diastole conditions, including the mean and standard deviations of FFR amplitudes for each. Additionally, the frequencies corresponding to the systole and diastole conditions were also calculated. These statistics provide an overview of the central tendency and variability of the FFR amplitudes and frequencies within each condition. 
+Descriptive statistics were computed for both the systole and diastole conditions, including the mean and standard deviations of FFR amplitudes for each. Additionally, the frequencies corresponding to the systole and diastole conditions were also calculated. 
 ```{r}
 #| label: tbl-stats-kable
 #| tbl-cap: Mean, SD for Systole and Diastole FFR Amplitudes and Frequencies
 #| warning: false
+#| tbl.pos: "H"
 
 # Read the summary statistics CSV
 summary_table <- read_csv("summary_statistics.csv")
@@ -211,9 +222,9 @@ colnames(summary_table) <- c("Mean Systole (dB)", "SD Systole (dB)",
 kable(summary_table)
 
 ```
-@tbl-stats-kable shows the mean systolic FFR amplitude was `r round(mean_systole, 2)` dB (SD = `r round(sd_systole, 2)`). The mean diastolic FFR amplitude was `r round(mean_diastole, 2)` dB (SD = `r round(sd_diastole, 2)`). For occurences, the mean systolic frequency was `r round(mean_n_systole, 2)` (SD = `r round(sd_n_systole, 2)`) and the mean diastolic frequency was `r round(mean_n_diastole, 2)` (SD = `r round(sd_n_diastole, 2)`).
-
-
+\vspace{-2em}
+@tbl-stats-kable shows the mean systolic FFR amplitude was `r round(mean_systole, 2)` dB (SD = `r round(sd_systole, 2)`). The mean diastolic FFR amplitude was `r round(mean_diastole, 2)` dB (SD = `r round(sd_diastole, 2)`). For occurences, the mean systolic frequency was `r round(mean_n_systole, 2)` (SD = `r round(sd_n_systole, 2)`) and the mean diastolic frequency was `r round(mean_n_diastole, 2)` (SD = `r round(sd_n_diastole, 2)`). 
+\vspace{-2em}
 ```{r}
 #| label: t-test calculation
 #| include: false
@@ -223,17 +234,14 @@ kable(summary_table)
 t_test_result <- t.test(frame$systole - frame$diastole, mu = 0, alternative = "less")
 print(t_test_result)
 
-
 # Calculate the mean difference (in dB)
 mean_diff <- mean(frame$systole - frame$diastole)
-
-
-wilcoxon_test <- wilcox.test(frame$systole, frame$diastole, alternative = "less", paired = TRUE)
 ```
 
 ```{r}
 #| label: tbl-ttest-kable
 #| tbl-cap: t-test Results
+#| tbl.pos: "H"
 
 # Create a tibble for the results
 t_test_table <- tibble(
@@ -250,7 +258,7 @@ knitr::kable(t_test_table)
 
 ```
 \vspace{-2em}
-The mean amplitude during systole (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`) was compared to the mean amplitude during diastole (M = `r round(mean(frame$diastole, na.rm = TRUE), 3)`) using a one-sample t-test in @tbl-ttest-kable. The results indicated that the difference between systolic and diastolic amplitudes was not marginally significant, *t*(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 3)`, *p* = `r format.pval(t_test_result$p.value, digits = 3, eps = .05)`. Although the p-value is slightly above the conventional threshold of 0.05, it suggests a trend toward significance.
+The mean amplitude during systole (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`) was compared to the mean amplitude during diastole (M = `r round(mean(frame$diastole, na.rm = TRUE), 3)`) using a one-sample t-test in @tbl-ttest-kable. The results indicated that the difference between systolic and diastolic amplitudes was not marginally significant, *t*(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 3)`, *p* = `r format.pval(t_test_result$p.value, digits = 3, eps = .05)`. p-value suggests a trend toward significance.
 ```{r}
 #| label: data-transformation-for-ggplot
 #| include: false
@@ -262,7 +270,7 @@ frame_long <- frame %>%
                names_to = "Condition",
                values_to = "FFR_Amplitude") %>%
   
-  # *** Use stringr to modify Condition labels ***
+  # Use stringr to modify Condition labels
   mutate(Condition = str_replace(Condition, "systole", "Systolic Phase"),
          Condition = str_replace(Condition, "diastole", "Diastolic Phase"),
          Condition = str_to_title(Condition)) # Capitalize
@@ -275,49 +283,47 @@ frame_long <- frame %>%
 #| warning: false
 #| message: false
 #| echo: false
-#| fig.cap: "Boxplot Comparison Between Low, Medium, & High conditions between Systole & Diastole "
+#| fig.cap: "Violin plot Comparison os FFR amplitudes in Systolic & Diastolic Conditions "
 #| fig.height: 3
-#| fig.width: 5
+#| fig.width: 4
 #| fig-pos: "H"
 
-median_systole <- median(frame$systole, na.rm = TRUE)
-median_diastole <- median(frame$diastole, na.rm = TRUE)
+median_systole <- median(frame$systole, na.rm = TRUE)  # Calculate median of 'systole', handling missing values.
+median_diastole <- median(frame$diastole, na.rm = TRUE) # Calculate median of 'diastole', handling missing values.
 
-ggplot(frame_long, aes(x = Condition, y = FFR_Amplitude, fill = Condition)) +
-  geom_violin(trim = FALSE, scale = "width", draw_quantiles = c(0.25, 0.5, 0.75)) +
-  geom_boxplot(width = 0.1, fill = "white", outlier.shape = NA) +
+ggplot(frame_long, aes(x = Condition, y = FFR_Amplitude, fill = Condition)) + # Basic plot setup: x, y, and fill color.
+  geom_violin(trim = FALSE, scale = "width", draw_quantiles = c(0.25, 0.5, 0.75)) +  # Add violin plot distribution, scale by width, draw quartiles.
+  geom_boxplot(width = 0.1, fill = "white", outlier.shape = NA) + # Overlay a narrow, white boxplot, hide outliers (shown by violin).
   labs(
-    x = "Condition", # Simpler x-axis label
-    y = "FFR Amplitude (dB)",
-    fill = "Condition"
+    x = "Condition",  # X-axis label
+    y = "FFR Amplitude (dB)",  # Y-axis label
+    fill = "Condition" # Legend Title
   ) +
-  theme_bw() +
+  theme_bw() +  # Use a black-and-white theme.
   theme(
-    axis.title.x = element_text(size = 10, face = "bold"),
-    axis.title.y = element_text(size = 10, face = "bold"),
-    axis.text.x = element_text(size = 10),
-    axis.text.y = element_text(size = 10),
-    legend.position = "top",
-    legend.title = element_text(size=12, face = "bold"),
+    axis.title.x = element_text(size = 10, face = "bold"),  # Style x-axis title.
+    axis.title.y = element_text(size = 10, face = "bold"),  # Style y-axis title.
+    axis.text.x = element_text(size = 10),  # Style x-axis text.
+    axis.text.y = element_text(size = 10),  # Style y-axis text.
+    legend.position = "top",   # Place legend at the top.
+    legend.title = element_text(size=12, face= "bold"), #Legend Title
   ) +
-  scale_fill_manual(values = c("Systolic Phase" = "#666666", "Diastolic Phase" = "#111111"))
+  scale_fill_manual(values = c("Systolic Phase" = "#666666", "Diastolic Phase" = "#111111"))  # Set custom fill colors.
 ```
-@fig-t-test displays the distribution of FFR amplitude for both conditions. Visually, the median FFR amplitude appears slightly higher in the diastolic phase (M = `r round(median(frame$diastole, na.rm = TRUE), 3)`) compared to the systolic phase (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`). However, both distributions exhibit a similar range and shape, with a somewhat bimodal appearance, suggesting the presence of two peaks in the density of FFR amplitude values within each phase. The interquartile ranges (IQRs), represented by the boxes within the violins, are also comparable between the two conditions, indicating similar variability in the central 50% of the data.
+\vspace{-2em}
+@fig-t-test displays the distribution of FFR amplitude for both conditions. Visually, the median FFR amplitude appears slightly higher in the diastolic phase (M = `r round(median(frame$diastole, na.rm = TRUE), 3)`) compared to the systolic phase (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`). Both distributions exhibit a similar overall range, extending from approximately 0 dB to over 20 dB. A notable feature of both distributions is their somewhat bimodal appearance, with two discernible peaks in the density, particularly evident in the diastolic phase. This bimodality might suggest the presence of two subgroups within each condition, potentially reflecting different underlying physiological states or responses to the auditory stimulus. The interquartile ranges (IQRs), represented by the white boxes within the violins, are visually comparable between the two conditions, indicating a similar degree of variability in the central 50% of the data. The spread of the data outside of the boxplot shows all the distribution of the data.
 
 ```{r}
 #| label: categorization for ANOVA
 #| include: false
 #| echo: false
-# Load necessary library
-
-## uses forcats
 
 # Calculate percentiles
-systole_low <- quantile(frame$systole, 0.33, na.rm = TRUE)
-systole_high <- quantile(frame$systole, 0.67, na.rm = TRUE)
+systole_low <- quantile(frame$systole, 0.33, na.rm = TRUE) # For low systole levels
+systole_high <- quantile(frame$systole, 0.67, na.rm = TRUE) # For high systole levels
 
-diastole_low <- quantile(frame$diastole, 0.33, na.rm = TRUE)
-diastole_high <- quantile(frame$diastole, 0.67, na.rm = TRUE)
+diastole_low <- quantile(frame$diastole, 0.33, na.rm = TRUE) # For low diastole levels
+diastole_high <- quantile(frame$diastole, 0.67, na.rm = TRUE) # For high diastole levels
 
 # Categorize systole and diastole based on percentiles and use forcats to handle factor levels
 percentile_frame <- frame %>%
@@ -344,13 +350,12 @@ percentile_frame <- frame %>%
 #| label: group-stats-using-function
 #| include: false
 #| echo: false
-# Second Use (Summary Statistics by Systole Category) ---
+# Second Use (Summary Statistics by Systole Category)
 systole_category_summary <- percentile_frame %>%
   group_by(systole_category) %>%  # Group by systole category
   save_summary_stats(filename = "systole_summary.csv") # Call your function
 
-# (Summary Statistics by Diastole Category) ---
-
+# (Summary Statistics by Diastole Category)
 diastole_category_summary <- percentile_frame %>%
     group_by(diastole_category) %>%
     save_summary_stats(filename = "diastole_summary.csv")
@@ -379,7 +384,7 @@ anova_diastole <- aov(diastole ~ diastole_category, data = percentile_frame)
 #| fig.width: 5
 #| fig-pos: "H"
 
-source("Plotting_Function.R")
+source("Plotting_Function.R") # Using my plotting function for these boxplots
 
 # Create boxplot for systole categories
 systole_plot <- CustomPlot(data = percentile_frame, x_var = "systole_category", y_var = "systole", 
@@ -388,7 +393,7 @@ systole_plot <- CustomPlot(data = percentile_frame, x_var = "systole_category", 
            y_label = "FFR Amplitudes", dodge_position = 0.9, point_size = 3, 
            facet_var = NULL, font_size = 12, theme_choice = "bw", 
            add_regression_line = FALSE)
-
+# Create boxplot for diastole categories
 diastole_plot <- CustomPlot(data = percentile_frame, x_var = "diastole_category", y_var = "diastole", 
            group_var = NULL, error_type = "SE", plot_type = "boxplot", 
            bar_width = 0.8, error_bar_width = 0.2, x_label = "Diastole", 
@@ -396,10 +401,32 @@ diastole_plot <- CustomPlot(data = percentile_frame, x_var = "diastole_category"
            facet_var = NULL, font_size = 12, theme_choice = "bw", 
            add_regression_line = FALSE)
 
-grid.arrange(systole_plot, diastole_plot, ncol = 2)  # Arrange the two plots in one row with two columns
+grid.arrange(systole_plot, diastole_plot, ncol = 2)  # Arrange the two plots in one row with two columns for better comparability
 
 ```
+\vspace{-2em}
 @fig-anova displays the distribution of FFR amplitudes for the low, medium, and high categories of systole (left panel) and diastole (right panel). Within the systolic phase, there is a clear increasing trend in FFR amplitude across the categories, with the median amplitude increasing from low to medium to high. The variability, as indicated by the interquartile range (IQR), also appears to increase across the systolic categories. A similar increasing trend in median FFR amplitude is observed across the diastolic categories. The variability within the diastolic categories also appears to increase from low to high, similar to the systolic phase. Outliers are present in both the systolic and diastolic distributions, primarily in the medium category.
+
+```{r}
+#| label: reshaping-data
+#| include: false
+#| echo: false
+
+# Reshape Data for Plotting (Long Format)
+percentile_frame_long <- percentile_frame %>%  # Start with the categorized data.
+  pivot_longer(
+    cols = c(systole_category, diastole_category),  # Columns to pivot (stack).
+    names_to = "condition_type",  # New column: original column names (systole_category, diastole_category).
+    values_to = "category"        # New column: values from the pivoted columns (Low, Medium, High).
+  ) %>%
+  mutate(
+    # Create a 'condition' column: "Systole" or "Diastole".
+    condition = ifelse(grepl("systole", condition_type), "Systole", "Diastole"),
+
+    # Create 'ffr_amplitude' column with the correct amplitude values.
+    ffr_amplitude = ifelse(condition == "Systole", systole, diastole)
+  )
+```
 
 ```{r}
 #| label: fig-category
@@ -412,48 +439,36 @@ grid.arrange(systole_plot, diastole_plot, ncol = 2)  # Arrange the two plots in 
 #| fig.width: 5
 #| fig-pos: "H"
 
-# --- Reshape Data for Plotting (Long Format) ---
-percentile_frame_long <- percentile_frame %>%
-  pivot_longer(
-    cols = c(systole_category, diastole_category),
-    names_to = "condition_type",
-    values_to = "category"
-  ) %>%
-  mutate(
-    condition = ifelse(grepl("systole", condition_type), "Systole", "Diastole"),
-    ffr_amplitude = ifelse(condition == "systole", systole, diastole)  # Correctly assign FFR amplitude
-  )
-
-ggplot(percentile_frame_long, aes(x = condition, y = ffr_amplitude, fill = condition)) +  # x = condition
-  geom_bar(stat = "summary", fun = "mean", position = position_dodge(width = 0.8), width = 0.7, color = "black") +
-  facet_wrap(~category, scales = "free_y", ncol = 3) +  # Facet by category
+ggplot(percentile_frame_long, aes(x = condition, y = ffr_amplitude, fill = condition)) +  # Map condition to x, amplitude to y, and condition to fill color.
+  geom_bar(stat = "summary", fun = "mean", position = position_dodge(width = 0.8), width = 0.7, color = "black") +  # Create a bar plot, calculating means, dodging bars, and adding a black outline.
+  facet_wrap(~category, scales = "free_y", ncol = 3) +  # Create separate panels for each category (Low, Medium, High), with independent y-axes, in a single row.
   labs(
-    x = "Condition (Systole vs. Diastole)",  # Keep overall x-axis title
-    y = "FFR Amplitude (dB)",
-    fill = "Condition"
+    x = "Condition (Systole vs. Diastole)",  # Set x-axis title.
+    y = "FFR Amplitude (dB)",  # Set y-axis title.
+    fill = "Condition" # Set legend title.
   ) +
-  theme_bw() +
+  theme_bw() +  # Use a black-and-white theme as a base.
   theme(
-    axis.text.x = element_blank(),        # Remove x-axis text WITHIN facets
-    axis.ticks.x = element_blank(),       # Remove x-axis ticks WITHIN facets
-    axis.title.x = element_text(size = 10, face = "bold"), # Keep overall x-axis title
-    axis.text.y = element_text(size = 12),
-    axis.title.y = element_text(size = 10, face = "bold"),
-    legend.position = "top",
-    legend.title = element_text(size = 10, face = "bold"),
-    legend.text = element_text(size = 10),
-    strip.text = element_text(size = 12, face = "bold"),  # Style facet labels
-    panel.spacing = unit(1, "lines")
+    axis.text.x = element_blank(), # Removing x-axis text within each facet (redundant with facet labels).
+    axis.ticks.x = element_blank(), # Removing x-axis tick marks within each facet.
+    axis.title.x = element_text(size = 10, face = "bold"), # Style the overall x-axis title.
+    axis.text.y = element_text(size = 12),  # Style y-axis text.
+    axis.title.y = element_text(size = 10, face = "bold"), # Style y-axis title
+    legend.position = "top",  # Place the legend at the top of the plot.
+    legend.title = element_text(size = 10, face = "bold"), # Style legend title.
+    legend.text = element_text(size = 10),  # Style legend text.
+    strip.text = element_text(size = 12, face = "bold"),  # Styling facet labels (Low, Medium, High).
+    panel.spacing = unit(1, "lines")  # Adding space between facets.
   ) +
-  scale_fill_manual(values = c("Systole" = "#666666", "Diastole" = "#111111")) # Remove breaks
+  scale_fill_manual(values = c("Systole" = "#666666", "Diastole" = "#111111"))  # Set custom fill colors for Systole and Diastole
 ```
 @fig-category displays the mean FFR amplitude (dB) for systole and diastole, stratified by low, medium, and high categories. Across all three categories (low, medium, and high), the mean FFR amplitude during diastole appears similar to the mean FFR amplitude during systole. There appears to be a trend of increasing mean FFR amplitude from the low to the high category for both systole and diastole.
 
 # Discussion
 
-This study investigated the influence of cardiac timing (systole vs. diastole) on the neural processing of a bistable auditory stimulus (BAS). Specifically, we examined whether presenting the BAS during systole, compared to diastole, would alter the amplitude of frequency-following responses (FFRs) in the auditory cortex, reflecting potential differences in neural encoding. Our results, based on a paired-samples t-test, revealed that the difference in FFR amplitude between systolic and diastolic presentations was not statistically significant *t*(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 3)`, *p* = `r format.pval(t_test_result$p.value, digits = 3, eps = .05)`. While the p-value approached conventional levels of significance, suggesting a possible trend, the null hypothesis cannot be definitively rejected. The mean FFR amplitude was numerically, though not significantly, larger during diastole (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`) than during systole (M = `r round(mean(frame$diastole, na.rm = TRUE), 3)`) .
+This study investigated the influence of cardiac timing (systole vs. diastole) on the neural processing of a bistable auditory stimulus (BAS). Specifically, we examined whether presenting the BAS during systole, compared to diastole, would alter the amplitude of frequency-following responses (FFRs) in the auditory cortex, reflecting potential differences in neural encoding. Our results, based on a paired-samples t-test, revealed that the difference in FFR amplitude between systolic and diastolic presentations was not statistically significant *t*(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 3)`, *p* = `r format.pval(t_test_result$p.value, digits = 3, eps = .05)`. While the p-value approached conventional levels of significance, suggesting a possible trend, the null hypothesis cannot be definitively rejected. The mean FFR amplitude was numerically, though not significantly, larger during diastole (M = `r round(mean(frame$diastole, na.rm = TRUE), 3)`) than during systole (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`) .
 
-These findings are relevant to the ongoing debate surrounding the baroreceptor hypothesis and its implications for sensory processing. The baroreceptor hypothesis, in its original formulation (Lacey & Lacey, 1978), posits that baroreceptor activation during systole leads to a global suppression of sensory processing. Our results, showing a non-significant difference and a numerical trend in the opposite direction (slightly larger amplitudes during diastole), do not provide strong support for this global suppression view, at least in the context of bistable auditory perception and FFR amplitude. This is consistent with more recent studies that also show that baroreceptors can faciliate visual perception(Veillette et. al., 2024).
+These findings are relevant to the ongoing debate surrounding the baroreceptor hypothesis and its implications for sensory processing. The baroreceptor hypothesis, in its original formulation [@Lacey1978], posits that baroreceptor activation during systole leads to a global suppression of sensory processing. Our results, showing a non-significant difference and a numerical trend in the opposite direction (slightly larger amplitudes during diastole), do not provide strong support for this global suppression view, at least in the context of bistable auditory perception and FFR amplitude. This is consistent with more recent studies that also show that baroreceptors can faciliate visual perception [@Veillette2024].
 
 ## Limitations and Future Directions
 
@@ -469,6 +484,3 @@ This study investigated the influence of cardiac timing (systole vs. diastole) o
 ::: {#refs}
 :::
 
-# Appendix
-
-# Title for Appendix
