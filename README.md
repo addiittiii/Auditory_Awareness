@@ -25,6 +25,7 @@ The study uses a within-subject experimental design where participants listen to
 * **`systole_summary.csv`**: CSV file for summary stats.
 * **`diastole_summary.csv`**: CSV file for summary stats.
 * **`Plotting_Function.R`**: An R script with a plotting function for easier plots
+* **`research_assessment.md`**: Research assessment file for objective tracking
 
 ## Dependencies
 
