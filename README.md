@@ -83,8 +83,8 @@ The analysis is performed using R code embedded within the `_auditory_awareness.
 
 *   **Descriptive Statistics:** Calculating means, standard deviations, etc.
 *   **One Samples t-tests:** Comparing the FFR amplitudes
-*   **ANOVA:**  ategories of FFR amplitude in Sytolic vs. Diastolic conditions
-*   **Data Visualizations:**  Creating bar plots, scatter plots, and boxplots to visualize the data and results.
+*   **ANOVA:**  Categories of FFR amplitude in Sytolic vs. Diastolic conditions
+*   **Data Visualizations:**  Creating bar plots, violin plots, and boxplots to visualize the data and results.
 
 ## Troubleshooting
 
