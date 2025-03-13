@@ -11,7 +11,7 @@ The study uses a within-subject experimental design where participants listen to
 ## Repository Structure
 
 *   **`finaldata1.xlsx`:** The data file with subjects, systole and diastole FFR amplitudes and frequencies.
-*   **`analysis.Rmd`:**  The main R Markdown file containing the data analysis, including:
+*   **`_auditory_awareness.qmd`:**  The main R Markdown file containing the data analysis, including:
     *   Data loading and preprocessing.
     *   Descriptive statistics.
     *   One-sample t-test comparing difference in FFR amplitudes between systole and diastole.
@@ -19,6 +19,7 @@ The study uses a within-subject experimental design where participants listen to
     *   Data visualization (violin plots, boxplots, bar plots).
     *   Creation of APA-style tables for t-test and ANOVA results.
 *   **`bibliography.bib`:** A BibTeX file containing the bibliographic references.
+*   **`gitignore`:** For ignoring irrelevant and bigger files
 *   **`README.md`:** This file, providing an overview of the project.
 *   **`overall_summary.csv`**: CSV file containing overall summary statistics.
 * **`systole_summary.csv`**: CSV file for summary stats.
