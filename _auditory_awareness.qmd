@@ -125,8 +125,8 @@ library(ggplot2)     # Data visualization
 library(gridExtra)   # Arranging multiple plots
 library(kableExtra)  # Styling tables
 library(car)         # Regression diagnostics
-
-
+conflicts_prefer(dplyr::filter, .quiet = TRUE)  # Resolve conflicts with filter function
+conflicts_prefer(flextable::separate_header, .quiet = TRUE)  # Resolve conflicts with separate_header function
 ```
 
 ```{r setup}
@@ -249,6 +249,8 @@ t_test_table <- tibble(
 knitr::kable(t_test_table)
 
 ```
+\vspace{-2em}
+The mean amplitude during systole (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`) was compared to the mean amplitude during diastole (M = `r round(mean(frame$diastole, na.rm = TRUE), 3)`) using a one-sample t-test in @tbl-ttest-kable. The results indicated that the difference between systolic and diastolic amplitudes was not marginally significant, *t*(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 3)`, *p* = `r format.pval(t_test_result$p.value, digits = 3, eps = .05)`. Although the p-value is slightly above the conventional threshold of 0.05, it suggests a trend toward significance.
 ```{r}
 #| label: data-transformation-for-ggplot
 #| include: false
@@ -267,7 +269,6 @@ frame_long <- frame %>%
 
 ```
 
-
 ```{r}
 #| label: fig-t-test
 #| include: true
@@ -278,7 +279,10 @@ frame_long <- frame %>%
 #| fig.height: 3
 #| fig.width: 5
 #| fig-pos: "H"
-#| 
+
+median_systole <- median(frame$systole, na.rm = TRUE)
+median_diastole <- median(frame$diastole, na.rm = TRUE)
+
 ggplot(frame_long, aes(x = Condition, y = FFR_Amplitude, fill = Condition)) +
   geom_violin(trim = FALSE, scale = "width", draw_quantiles = c(0.25, 0.5, 0.75)) +
   geom_boxplot(width = 0.1, fill = "white", outlier.shape = NA) +
@@ -289,25 +293,16 @@ ggplot(frame_long, aes(x = Condition, y = FFR_Amplitude, fill = Condition)) +
   ) +
   theme_bw() +
   theme(
-    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
     axis.title.x = element_text(size = 10, face = "bold"),
     axis.title.y = element_text(size = 10, face = "bold"),
     axis.text.x = element_text(size = 10),
     axis.text.y = element_text(size = 10),
     legend.position = "top",
     legend.title = element_text(size=12, face = "bold"),
-    legend.text = element_text(size = 10)
   ) +
   scale_fill_manual(values = c("Systolic Phase" = "#666666", "Diastolic Phase" = "#111111"))
 ```
-
-
-\vspace{-2em}
-The mean amplitude during systole (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`) was compared to the mean amplitude during diastole (M = `r round(mean(frame$diastole, na.rm = TRUE), 3)`) using a one-sample t-test in @tbl-ttest-kable. The results indicated that the difference between systolic and diastolic amplitudes was not marginally significant, *t*(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 3)`, *p* = `r format.pval(t_test_result$p.value, digits = 3, eps = .05)`. Although the p-value is slightly above the conventional threshold of 0.05, it suggests a trend toward significance.
-```{r}
-
-```
-
+@fig-t-test displays the distribution of FFR amplitude for both conditions. Visually, the median FFR amplitude appears slightly higher in the diastolic phase (M = `r round(median(frame$diastole, na.rm = TRUE), 3)`) compared to the systolic phase (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`). However, both distributions exhibit a similar range and shape, with a somewhat bimodal appearance, suggesting the presence of two peaks in the density of FFR amplitude values within each phase. The interquartile ranges (IQRs), represented by the boxes within the violins, are also comparable between the two conditions, indicating similar variability in the central 50% of the data.
 
 ```{r}
 #| label: categorization for ANOVA
@@ -345,9 +340,24 @@ percentile_frame <- frame %>%
 
 ```
 
+```{r}
+#| label: group-stats-using-function
+#| include: false
+#| echo: false
+# Second Use (Summary Statistics by Systole Category) ---
+systole_category_summary <- percentile_frame %>%
+  group_by(systole_category) %>%  # Group by systole category
+  save_summary_stats(filename = "systole_summary.csv") # Call your function
+
+# (Summary Statistics by Diastole Category) ---
+
+diastole_category_summary <- percentile_frame %>%
+    group_by(diastole_category) %>%
+    save_summary_stats(filename = "diastole_summary.csv")
+```
 
 ```{r}
-#| label: anova
+#| label: anova-calculation
 #| include: false
 #| echo: false
 # Perform ANOVA for systole categories
@@ -357,8 +367,9 @@ anova_systole <- aov(systole ~ systole_category, data = percentile_frame)
 anova_diastole <- aov(diastole ~ diastole_category, data = percentile_frame)
 ```
 
+
 ```{r}
-#| label: fig-anova-systole
+#| label: fig-anova
 #| include: true
 #| warning: false
 #| message: false
@@ -388,6 +399,7 @@ diastole_plot <- CustomPlot(data = percentile_frame, x_var = "diastole_category"
 grid.arrange(systole_plot, diastole_plot, ncol = 2)  # Arrange the two plots in one row with two columns
 
 ```
+@fig-anova displays the distribution of FFR amplitudes for the low, medium, and high categories of systole (left panel) and diastole (right panel). Within the systolic phase, there is a clear increasing trend in FFR amplitude across the categories, with the median amplitude increasing from low to medium to high. The variability, as indicated by the interquartile range (IQR), also appears to increase across the systolic categories. A similar increasing trend in median FFR amplitude is observed across the diastolic categories. The variability within the diastolic categories also appears to increase from low to high, similar to the systolic phase. Outliers are present in both the systolic and diastolic distributions, primarily in the medium category.
 
 ```{r}
 #| label: fig-category
@@ -396,8 +408,8 @@ grid.arrange(systole_plot, diastole_plot, ncol = 2)  # Arrange the two plots in 
 #| message: false
 #| echo: false
 #| fig.cap: "Barplot Comparison Between Low, Medium, & High conditions between Systole & Diastole "
-#| fig.height: 4
-#| fig.width: 6
+#| fig.height: 3
+#| fig.width: 5
 #| fig-pos: "H"
 
 # --- Reshape Data for Plotting (Long Format) ---
@@ -414,7 +426,7 @@ percentile_frame_long <- percentile_frame %>%
 
 ggplot(percentile_frame_long, aes(x = condition, y = ffr_amplitude, fill = condition)) +  # x = condition
   geom_bar(stat = "summary", fun = "mean", position = position_dodge(width = 0.8), width = 0.7, color = "black") +
-  facet_wrap(~category, scales = "free_y") +  # Facet by category
+  facet_wrap(~category, scales = "free_y", ncol = 3) +  # Facet by category
   labs(
     x = "Condition (Systole vs. Diastole)",  # Keep overall x-axis title
     y = "FFR Amplitude (dB)",
@@ -435,20 +447,20 @@ ggplot(percentile_frame_long, aes(x = condition, y = ffr_amplitude, fill = condi
   ) +
   scale_fill_manual(values = c("Systole" = "#666666", "Diastole" = "#111111")) # Remove breaks
 ```
-
-
-
-
-
-
-
-
+@fig-category displays the mean FFR amplitude (dB) for systole and diastole, stratified by low, medium, and high categories. Across all three categories (low, medium, and high), the mean FFR amplitude during diastole appears similar to the mean FFR amplitude during systole. There appears to be a trend of increasing mean FFR amplitude from the low to the high category for both systole and diastole.
 
 # Discussion
 
+This study investigated the influence of cardiac timing (systole vs. diastole) on the neural processing of a bistable auditory stimulus (BAS). Specifically, we examined whether presenting the BAS during systole, compared to diastole, would alter the amplitude of frequency-following responses (FFRs) in the auditory cortex, reflecting potential differences in neural encoding. Our results, based on a paired-samples t-test, revealed that the difference in FFR amplitude between systolic and diastolic presentations was not statistically significant *t*(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 3)`, *p* = `r format.pval(t_test_result$p.value, digits = 3, eps = .05)`. While the p-value approached conventional levels of significance, suggesting a possible trend, the null hypothesis cannot be definitively rejected. The mean FFR amplitude was numerically, though not significantly, larger during diastole (M = `r round(mean(frame$systole, na.rm = TRUE), 3)`) than during systole (M = `r round(mean(frame$diastole, na.rm = TRUE), 3)`) .
+
+These findings are relevant to the ongoing debate surrounding the baroreceptor hypothesis and its implications for sensory processing. The baroreceptor hypothesis, in its original formulation (Lacey & Lacey, 1978), posits that baroreceptor activation during systole leads to a global suppression of sensory processing. Our results, showing a non-significant difference and a numerical trend in the opposite direction (slightly larger amplitudes during diastole), do not provide strong support for this global suppression view, at least in the context of bistable auditory perception and FFR amplitude. This is consistent with more recent studies that also show that baroreceptors can faciliate visual perception(Veillette et. al., 2024).
+
 ## Limitations and Future Directions
 
+Although the current study did not find a statistically significant effect of cardiac timing on FFR amplitude, the observed trend, coupled with the theoretical significance of cardio-auditory interactions, justifies further research in this area. Future investigations could benefit from increasing the sample size to enhance statistical power, exploring cortical responses using EEG/MEG measures like ERPs or source localization to capture later stages of auditory processing, and manipulating participants' perceptual state to examine the influence of cardiac timing on different interpretations of the bistable auditory stimulus. Additionally, future work should investigate individual differences in interoceptive awareness and sensitivity as potential moderators of the relationship between cardiac timing and FFR amplitude, and consider examining the effects of cardiac timing across the entire cardiac cycle, rather than solely comparing systole and diastole.
+
 ## Conclusion
+This study investigated the influence of cardiac timing (systole vs. diastole) on neural processing of a bistable auditory stimulus, hypothesizing that FFR amplitudes would differ between these cardiac phases. While the paired-samples t-test did not reveal a statistically significant difference (p = 0.051), a trend towards larger diastolic amplitudes, combined with the theoretical importance of cardio-auditory interactions, warrants further exploration. The findings do not strongly support the baroreceptor hypothesis of global sensory suppression during systole within our paradigm. Although limitations such as sample size and the focus on subcortical FFRs should be considered, the study highlights the need for continued research into the interplay between internal and external sensory processing. Future investigations with larger samples, cortical measures (e.g., ERPs), manipulation of perceptual state, and consideration of individual differences in interoceptive awareness are crucial for a more complete understanding of how cardiac signals modulate auditory perception. Ultimately, this research contributes to a broader understanding of embodied perception.
 
 # References
 
