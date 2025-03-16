@@ -50,7 +50,7 @@ Describe whether and how you used AI/LLMs when completing this project: I did us
 Optionally (for engagement points) reflect on your use of AI:
  
 Working with AI definitely did make things go a lot faster. I did this whole project in like a day so but since I had already done exactly this for my previous mini project, I kind of knew the problems I'd run into.
-But, again using AI studio did not accept things blindly. It was really hard to articulate what I wanted to the AI and so many times it would give me something totally wrong and I had to troubleshoot it twice as much.
+But, again using AI studio did not make me accept things blindly. It was really hard to articulate what I wanted the AI to do, and so many times it would give me something totally wrong and I had to troubleshoot it twice as much.
 I think the best way to describe it is that the LLM was a really powerful tool, but it was still just a tool. It's not a substitute for understanding the research itself. At the end, I had to use my own brain to understand
 exactly what my aim is and how am I going to get there. But AI was definitely a big help during the whole process to help me brainstorm and come up with productive ideas.
 
