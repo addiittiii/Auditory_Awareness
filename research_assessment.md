@@ -36,21 +36,23 @@ Submission date: March 12, 2025
 
 Submission number (1-4): 1
 
-Project GitHub repository URL: 
+Project GitHub repository URL: https://github.com/addiittiii/Auditory_Awareness
 
-Filename of manuscript .qmd:
+Filename of manuscript .qmd:  _auditory_awareness.qmd
 
-Filename of knitted .pdf:
+Filename of knitted .pdf: _auditory_awareness.pdf
 
 
 ## AI Statement
 
-Describe whether and how you used AI/LLMs when completing this project: 
+Describe whether and how you used AI/LLMs when completing this project: I did use AI for this project-specifically AI studio and Claude. I mainly used it for troubleshooting the bugs which occured alot during plotting because hitting all those objectives with my kind of project was a bit challenging.So I did take ideas from AI as to how I can hit these objectives with the data I was handling.
 
 Optionally (for engagement points) reflect on your use of AI:
-
-
-
+ 
+Working with AI definitely did make things go a lot faster. I did this whole project in like a day so but since I had already done exactly this for my previous mini project, I kind of knew the problems I'd run into.
+But, again using AI studio did not accept things blindly. It was really hard to articulate what I wanted to the AI and so many times it would give me something totally wrong and I had to troubleshoot it twice as much.
+I think the best way to describe it is that the LLM was a really powerful tool, but it was still just a tool. It's not a substitute for understanding the research itself. At the end, I had to use my own brain to understand
+exactly what my aim is and how am I going to get there. But AI was definitely a big help during the whole process to help me brainstorm and come up with productive ideas.
 
 
 ## Overall requirements
@@ -140,7 +142,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         2. When a reader opts-in to installing packages by uncommenting the code, it runs without errors 
     2. Uses more than one function to install/load/require packages (including those used in commented code)
 
-        -   [ ] Objective attempt
+        -   [x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -208,7 +210,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses `forcats` functions in a data transformation pipeline
     - NOTE: Though they are base R functions, `factor()` and `levels()` can be used to meet this objective as long as they are used in a way that demonstrates the same skills as `forcats` functions, which should involve including optional arguments
 
-        -   [x] Objective attempt
+        -   [] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -297,7 +299,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses at least 2 citation forms (e.g., (Author, Year), Author (Year), etc.)
     3. May use `cite_r()` to cite R and R packages
 
-        -   [ ] Objective attempt
+        -   [x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -309,7 +311,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. May include R and R package citations with `cite_r()`
     5. May include references not cited in-text
 
-        -   [ ] Objective attempt
+        -   [x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -419,21 +421,36 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 Optionally (for engagement points) write a brief reflection about your work on this project. You can use this space to answer the following questions, but feel free to ignore these questions and write about whatever you think is most important.
 
 - What was the most challenging aspect of this project?
+The most challenging part was definitely planning HOW to hit all the objectives. Because I had to do a lot of things which I wouldn't be adding in my actual analysis but I did get to learn so many things just through this one project. I will definitely
+be using quarto to render my final thesis project as well. I did end up making 3 figures and 2 tables for my whole project and it was alot of hardwork to figure out how to work around it but I got it done. All of them were extremely customized and there is a trend of consistency
+in all the figures i.e. their colors, fonts and sizes. 
 - What was the most rewarding aspect of this project?
+Seeing my thesis come to life. Given we have been working on this for a while so it was nice to analyse the results I myself collected using EEG and ECG measures for the first time and getting slightly significant results? (i still have 4 more participants to collect).
+And it was satisfying to render the pdf after every change and bettering it every single time. 
 - What would you do differently if you were to start over?
+Start it earlier....I am happy with what I could get done but there is so much I still need to add. I did not elaborate on the discussion alot which I have to for my final thesis.
 - What did you learn from this project that you will carry forward to future projects?
+How much ever annoying it was to render tables in the quarto doc, it did teach me how to work around spaces, tables and figures to make it all work. I think I can do anything now... LOL. Also, visualizing different statsitical tests is also something which I learnt throught this process--
+basically which plot is suitable for which test and why. 
 - What are you most proud of in this project?
+I think I have got a hang of version control pretty well. I have used it effectively throughout the whoel process. I committed every big and significant change and named files mindfully with a very inforamtive readme file. 
 
 
 Alternatively/additionally in mind some of the suggested ways to earn engagement points, and expand on this (or other aspects of your project) in your reflection:
 
 - Creating many figures and tables, or particularly complex or creative ones
+Answered in reflection
 - Impressively thoughtful and thorough narrative writing in your literature review or discussion section
+
+I have provided a very extensive literature review with a clear gap in research and what I aim to answer with my project. it starts with a broad argument and narrows down to a very specific and niche research question.
+Moreover, I have a specific hypothesis which I aimed to test.
+
 - Employing sophisticated statistical techniques in your analysis
 - Making excellent use of markdown features to create a polished final product
 - Having a maximally reproducible and dynamic manuscript
-- Fully committing to best practices for version control and GitHub integration/organization
 
+- Fully committing to best practices for version control and GitHub integration/organization
+Answered in reflection
 
 
 
